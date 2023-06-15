@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login and Registration Page</title>
+  <style>
+    body {
+      font-family: Courier, monospace;
+      background-color: #000000;
+      color: #00ff00;
+      text-align: center;
+      padding-top: 100px;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      background-color: #111111;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      color: #00ff00;
+      font-size: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #00ff00;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #111111;
+      color: #00ff00;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #00ff00;
+      border: none;
+      color: #000000;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #00cc00;
+    }
+
+    #message {
+      color: #ff0000;
+      margin-top: 10px;
+    }
+
+    #registerForm {
+      display: none;
+    }
+
+    #registerLink {
+      color: #00ff00;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* Background Animation */
+    body:before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background-image: url('https://payload.cargocollective.com/1/0/12201/11676519/02_gif.gif');
+      background-size: cover;
+      animation: codingAnimation 30s infinite;
+    }
+
+    @keyframes codingAnimation {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+    }
+  </style>
+  <script src="login2.js"></script>
+  <script>
+    function toggleForm() {
+      var loginForm = document.getElementById("loginForm");
+      var registerForm = document.getElementById("registerForm");
+      var registerLink = document.getElementById("registerLink");
+
+      if (registerForm.style.display === "none") {
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+        registerLink.innerText = "Back to Login";
+      } else {
+        loginForm.style.display = "block";
+        registerForm.style.display = "none";
+        registerLink.innerText = "Register";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Login">
+      <p id="message"></p>
+      <a id="registerLink" onclick="toggleForm()">Register</a>
+    </form>
+
+    <form id="registerForm">
+      <h2>Registration</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <input type="submit" value="Register">
+      <p id="message"></p>
+      <a id="registerLink" onclick="toggleForm()">Back to Login</a>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Team</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("https://th.bing.com/th/id/R.f01b92f84a8bb6ae941d942cb1f6c16d?rik=UO2eEBJ31XWpEA&pid=ImgRaw&r=0");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .team {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      width: 300px;
+      text-align: center;
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+      animation: fade-in 1s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      animation: rotate-in 1s ease;
+    }
+
+    .team-member h4 {
+      margin: 0;
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 5px;
+      animation: slide-up 1s ease;
+    }
+
+    .team-member h4 a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .team-member h4 a:hover {
+      color: #007bff;
+    }
+
+    .team-member p {
+      color: #888;
+      font-size: 16px;
+      margin: 0;
+      opacity: 0;
+      animation: fade-in-text 1s ease 1s forwards;
+    }
+
+    .team-member .social-links {
+      margin-top: 20px;
+      opacity: 0;
+      animation: fade-in-text 1s ease 1.5s forwards;
+    }
+
+    .team-member .social-links a {
+      display: inline-block;
+      margin-right: 5px;
+      color: #007bff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .team-member .social-links a:hover {
+      color: #0056b3;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes rotate-in {
+      0% {
+        transform: rotateY(180deg);
+      }
+      100% {
+        transform: rotateY(0deg);
+      }
+    }
+
+    @keyframes slide-up {
+      0% {
+        transform: translateY(20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade-in-text {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Team</h1>
+
+  <div class="team">
+    <div class="team-member">
+      <img src="1667402652541.jfif" alt="Ahmed Yaseen Ghouri">
+      <h4><a href="https://www.linkedin.com/in/ahmed-yaseen-ghouri-a56b171a1/" target="_blank">Ahmed Yaseen Ghouri</a></h4>
+      <p>Solution Architecture</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ahmed-yaseen-ghouri-a56b171a1/" target="_blank">LinkedIn</a>
+        
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="fahad.JPG" alt="Fahad Rasheed">
+      <h4><a href="https://www.linkedin.com/in/fahad-rasheed-5a276117a/" target="_blank">Fahad Rasheed</a></h4>
+      <p>GIS R&D Expert</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/fahad-rasheed-5a276117a/" target="_blank">LinkedIn</a>
+        
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="haseeb.JPG" alt="Haseeb Raoof">
+      <h4>Haseeb Raoof</h4>
+      <p>GIS Products Design</p>
+      <div class="social-links">
+        <a href="#" target="_blank">LinkedIn</a>
+        
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="shaheer.JPG" alt="Shaheer Panwar">
+      <h4>Shaheer Panwar</h4>
+      <p>GIS Manager</p>
+      <div class="social-links">
+        <a href="#" target="_blank">LinkedIn</a>
+        
+      </div>
+    </div>
+
+    <!-- Add more team members here -->
+  </div>
+
+  <script>
+    // Add animations using JavaScript if needed
+  </script>
+</body>
+</html>
